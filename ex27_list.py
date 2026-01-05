@@ -37,3 +37,28 @@ matrix = [
 # 0 번째 행의 합 = 12
 # 1 번째 행의 합 = 6
 # 2 번째 행의 합 = 24
+for rowIdx, row in enumerate(matrix):
+    total = sum(row)    # 행의 합
+    print(f'{rowIdx}번째 행의 합 = {total}')
+
+# [2] matrix에 저장된 각 요소의 값을 이중 for루프 이용해서 출력하세요
+for r_idx, r in enumerate(matrix):
+    for c_idx, c in enumerate(r):
+        print(c, end = ' ')
+    print()
+
+# (1)
+for row in matrix:  # row : 1차 list => vector
+    for col in row: # col : 저장된 데이터 => scala
+        print(col, end = ', ')
+    print()
+
+# (2)
+print('---------------------------------')
+for x, y, z in matrix:
+    print(x, y, z)
+
+# (3)
+for i in range(len(matrix)):    # 행의 크기만큼
+    for j in range(len(matrix[i])):  # 열의 크기만큼
+        print(f'matrix[{i}][{j}] = {matrix[i][j]}')
